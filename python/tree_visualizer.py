@@ -21,7 +21,7 @@ class TreeVisualizer:
     @staticmethod
     def visualize(tree):
         name = f'tree_{tree.value if tree else None}_{id(tree)}'
-        format = 'png'
-        g = Digraph(name, format=format, node_attr={'shape': 'ellipse'})
+        fmt = 'png'
+        g = Digraph(name, format=fmt, node_attr={'shape': 'ellipse'})
         TreeVisualizer.insert_node(g, tree)
-        g.render(view=True, quiet_view=True, cleanup=True, outfile=f'./pics/{name}.{format}')
+        g.render(view=True, quiet_view=True, cleanup=True, outfile=f'./pics/{name}.{fmt}')

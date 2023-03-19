@@ -86,7 +86,7 @@ def test_postorder(tree, post):
 
 @pytest.mark.traversal
 @pytest.mark.parametrize("tree, level", zip(TEST_TREES, EXPECTED_LEVELORDER))
-def test_postorder(tree, level):
+def test_levelorder(tree, level):
     t = BST()
     t.insert_list(tree)
     assert len(t) == len(tree)
